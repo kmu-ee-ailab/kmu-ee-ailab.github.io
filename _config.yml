@@ -13,10 +13,10 @@ title                    : "Kookmin AILab"
 title_separator          : "-"
 name                     : &name "Kookmin AILab"
 description              : &description "Kookmin University Artificial Intelligence Lab"   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : https://kookmin-ee-ailab.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
+url                      : https://ailab.kookmin.ac.kr # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "kookmin-ee-ailab/kookmin-ee-ailab.github.io"
+repository               : "kmu-ee-ailab/kmu-ee-ailab.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.

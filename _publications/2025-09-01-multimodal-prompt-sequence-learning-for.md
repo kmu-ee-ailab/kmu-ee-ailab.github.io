@@ -7,7 +7,7 @@ excerpt: '**Jongsoo Lim**, **Soochahn Lee**'
 thumbnail: '/images/publications/2025-09-01-multimodal-prompt-sequence-learning-for-fig2.png'
 pdfurl: 'https://papers.miccai.org/miccai-2025/paper/5230_paper.pdf'
 htmlurl: 'http://dx.doi.org/10.1007/978-3-032-04965-0_32'
-codeurl: 'https://github.com/kookmin-ee-ailab/mpsl-vessel-seg'
+codeurl: 'https://github.com/kmu-ee-ailab/mpsl-vessel-seg'
 bibtex: |
     @inbook{Lim_2025, title={Multimodal Prompt Sequence Learning for Interactive Segmentation of Vascular Structures}, ISBN={9783032049650}, ISSN={1611-3349}, url={http://dx.doi.org/10.1007/978-3-032-04965-0_32}, DOI={10.1007/978-3-032-04965-0_32}, booktitle={Medical Image Computing and Computer Assisted Intervention – MICCAI 2025}, publisher={Springer Nature Switzerland}, author={Lim, Jongsoo and Lee, Soochahn}, year={2025}, month=sep, pages={337–347} }
 citation_mla: |
