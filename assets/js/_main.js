@@ -54,11 +54,15 @@ var toggleTheme = () => {
 // Read the Plotly data from the code block, hide it, and render the chart as new node. This allows for the 
 // JSON data to be retrieve when the theme is switched. The listener should only be added if the data is 
 // actually present on the page.
-import { plotlyDarkLayout, plotlyLightLayout } from './theme.js';
 let plotlyElements = document.querySelectorAll("pre>code.language-plotly");
 if (plotlyElements.length > 0) {
-  document.addEventListener("readystatechange", () => {
-    if (document.readyState === "complete") {
+  // Load the Plotly theme layouts lazily and defensively. Using a dynamic
+  // import() instead of a top-level static import means a missing or stale
+  // theme.js can no longer abort this entire bundle before jQuery/greedy-nav
+  // initialize (which silently kills the nav dropdown). It now only affects
+  // Plotly theming, and only on pages that actually contain charts.
+  import('./theme.js').then(({ plotlyDarkLayout, plotlyLightLayout }) => {
+    const renderPlots = () => {
       plotlyElements.forEach((elem) => {
         // Parse the Plotly JSON data and hide it
         var jsonData = JSON.parse(elem.textContent);
@@ -77,7 +81,19 @@ if (plotlyElements.length > 0) {
         }
         Plotly.react(chartElement, jsonData.data, jsonData.layout);
       });
+    };
+    // document may already be "complete" by the time the dynamic import
+    // resolves, so render immediately in that case instead of waiting for
+    // a readystatechange that already fired.
+    if (document.readyState === "complete") {
+      renderPlots();
+    } else {
+      document.addEventListener("readystatechange", () => {
+        if (document.readyState === "complete") renderPlots();
+      });
     }
+  }).catch((e) => {
+    console.error("Could not load Plotly theme layouts from theme.js:", e);
   });
 }
 
