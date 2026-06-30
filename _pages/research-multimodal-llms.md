@@ -15,6 +15,6 @@ We study the capabilities and limitations of multimodal large language models (M
 
 ## Related publications
 
-- [UniTalk: Towards Universal Active Speaker Detection in Real World Scenarios](/publications/2025-01-01-unitalk-towards-universal-active-speake/) — arXiv preprint, 2025
+- [Revisiting Active Speaker Detection: An In-the-Wild Benchmark for Generalization and Robustness](/publications/2025-01-01-unitalk-towards-universal-active-speake/) — arXiv preprint, 2025
 - [Contamination Detection for VLMs using Multi-Modal Semantic Perturbation](/publications/2025-11-05-contamination-detection-for-vlms-using/) — arXiv preprint, 2025
-- [See, Hear, and Understand: Benchmarking Audiovisual Human Speech Understanding in Multimodal Large Language Models](/publications/2025-12-01-see-hear-and-understand-benchmarking/) — arXiv preprint, 2025
+- [See, Hear, and Understand: Benchmarking Audiovisual Human Speech Understanding in Multimodal Large Language Models](/publications/2025-12-01-see-hear-and-understand-benchmarking/) — CVPR (Findings), 2026

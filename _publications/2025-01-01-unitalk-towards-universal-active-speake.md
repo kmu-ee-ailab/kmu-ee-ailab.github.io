@@ -1,5 +1,5 @@
 ---
-title: "UniTalk: towards universal active speaker detection in real world scenarios"
+title: "Revisiting Active Speaker Detection: An In-the-Wild Benchmark for Generalization and Robustness"
 collection: publications
 date: 2025-01-01
 venue: 'arXiv preprint arXiv:2505.21954'
@@ -10,30 +10,33 @@ codeurl: 'https://github.com/plnguyen2908/UniTalk-ASD-code'
 dataseturl: 'https://huggingface.co/datasets/plnguyen2908/LASER-bench/tree/main'
 thumbnail: '/images/publications/2025-01-01-unitalk-towards-universal-active-speake-fig1.png' 
 bibtex: |
-    @article{Tao_2025, title={Enhancing Real-World Active Speaker Detection With Multi-Modal Extraction Pre-Training}, volume={27}, ISSN={1941-0077}, url={http://dx.doi.org/10.1109/tmm.2024.3521791}, DOI={10.1109/tmm.2024.3521791}, journal={IEEE Transactions on Multimedia}, publisher={Institute of Electrical and Electronics Engineers (IEEE)}, author={Tao, Ruijie and Qian, Xinyuan and Das, Rohan Kumar and Gao, Xiaoxue and Wang, Jiadong and Li, Haizhou}, year={2025}, pages={2362–2373} }
+    @article{nguyen2025revisiting,
+      title={Revisiting Active Speaker Detection: An In-the-Wild Benchmark for Generalization and Robustness},
+      author={Nguyen, Le Thien Phuc and Yu, Zhuoran and Cao, Khoa Quang Nhat and Guo, Yuwei and Pham, Tu Ho Manh and Nguyen, Tuan Tai and Vo, Toan Ngo Duc and Poon, Lucas and Lee, Soochahn and Lee, Yong Jae},
+      journal={arXiv preprint arXiv:2505.21954},
+      year={2025}
+    }
 citation_mla: |
-    Tao, Ruijie, et al. “Enhancing Real-World Active Speaker Detection With Multi-Modal Extraction Pre-Training.” IEEE Transactions on Multimedia, vol. 27, 2025, pp. 2362–73. Crossref, https://doi.org/10.1109/tmm.2024.3521791.
+    Nguyen, Le Thien Phuc, et al. "Revisiting Active Speaker Detection: An In-the-Wild Benchmark for Generalization and Robustness." arXiv preprint arXiv:2505.21954 (2025).
 ---
-
-<!-- NOTE: Summary based on title only - verify and expand with actual abstract -->
 
 **Authors:** Le Thien Phuc Nguyen, Zhuoran Yu, Khoa Quang Nhat Cao, Yuwei Guo, Tu Ho Manh Pham, Tuan Tai Nguyen, Toan Ngo Duc Vo, Lucas Poon, **Soochahn Lee**, Yong Jae Lee
 
-> **TL;DR:** UniTalk proposes a universal active speaker detection framework that works robustly across diverse real-world scenarios, handling challenging conditions like occlusion, noise, and multiple speakers.
+> **TL;DR:** UniTalk is a challenging new benchmark for active speaker detection that captures real-world conditions -- underrepresented languages, noisy backgrounds, and crowded scenes -- and shows that state-of-the-art models which look near-perfect on older benchmarks still fail to generalize.
 
 ---
 
 ## What this paper is about
 
-Active speaker detection -- figuring out who is currently talking in a video -- sounds simple but breaks down in real-world conditions. Existing methods struggle with occlusions, noisy audio, multiple simultaneous speakers, and diverse recording setups.
+Active speaker detection (ASD) -- figuring out who is currently talking in a video -- looks almost solved on established benchmarks like AVA. But AVA is built largely from old movies, so it has a large domain gap from real-world video, and strong AVA scores don't reflect how models behave in the wild.
 
 ## Key idea
 
-UniTalk introduces a unified framework designed to generalize across varied real-world scenarios for active speaker detection. It likely leverages multi-modal cues (audio and visual) with architectural choices that make the system robust to the messy conditions found outside of controlled datasets.
+The paper introduces UniTalk, a new ASD benchmark dataset built specifically around challenging in-the-wild conditions -- underrepresented languages, noisy backgrounds, and crowded scenes -- at a scale comparable to AVA. Evaluating state-of-the-art models reveals that ASD is far from solved: models that are near-perfect on AVA do not saturate on UniTalk, while models trained on UniTalk generalize better to other in-the-wild datasets such as Talkies and ASW.
 
 ## Why it matters
 
-Reliable active speaker detection is a key building block for video conferencing, surveillance, and multimedia understanding systems that need to work in unconstrained environments.
+By exposing the generalization and robustness gaps that older, movie-based benchmarks hide, UniTalk gives the community a realistic testbed for building active speaker detection systems that actually hold up in unconstrained, real-world settings.
 
 <!-- TODO: Add key figures from the paper -->
 ![Figure description](/images/publications/2025-01-01-unitalk-towards-universal-active-speake-fig1.png)

@@ -1,25 +1,24 @@
 ---
 title: "See, Hear, and Understand: Benchmarking Audiovisual Human Speech Understanding in Multimodal Large Language Models"
 collection: publications
-date: 2025-12-01
-venue: 'arXiv preprint'
+date: 2026-06-01
+venue: 'IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), Findings'
 excerpt: 'Le Thien Phuc Nguyen, Zhuoran Yu, **Samuel Low Yu Hang**, **Subin An**, **Jeongik Lee**, **Yohan Ban**, **SeungEun Chung**, Thanh-Huy Nguyen, **JuWan Maeng**, **Soochahn Lee**, Yong Jae Lee'
 titleurl: 'https://plnguyen2908.github.io/AV-SpeakerBench-project-page/'
 thumbnail: '/images/publications/2025-12-01-see-hear-and-understand-benchmarking-fig1.png'
-htmlurl: 'https://arxiv.org/abs/2512.02231'
-pdfurl: 'https://arxiv.org/pdf/2512.02231.pdf'
+htmlurl: 'https://openaccess.thecvf.com/content/CVPR2026F/html/Nguyen_See_Hear_and_Understand_Benchmarking_Audiovisual_Human_Speech_Understanding_in_CVPRF_2026_paper.html'
+pdfurl: 'https://openaccess.thecvf.com/content/CVPR2026F/papers/Nguyen_See_Hear_and_Understand_Benchmarking_Audiovisual_Human_Speech_Understanding_in_CVPRF_2026_paper.pdf'
 codeurl: https://github.com/plnguyen2908/AV-SpeakerBench
 dataseturl: https://huggingface.co/datasets/plnguyen2908/AV-SpeakerBench
 bibtex: |
-    @article{nguyen2025see,
+    @inproceedings{nguyen2026see,
       title={See, Hear, and Understand: Benchmarking Audiovisual Human Speech Understanding in Multimodal Large Language Models},
       author={Nguyen, Le Thien Phuc and Yu, Zhuoran and Hang, Samuel Low Yu and An, Subin and Lee, Jeongik and Ban, Yohan and Chung, SeungEun and Nguyen, Thanh-Huy and Maeng, JuWan and Lee, Soochahn and Lee, Yong Jae},
-      journal={arXiv preprint arXiv:2512.02231},
-      year={2025},
-      month=dec
+      booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), Findings},
+      year={2026}
     }
 citation_mla: |
-    Nguyen, Le Thien Phuc, et al. "See, Hear, and Understand: Benchmarking Audiovisual Human Speech Understanding in Multimodal Large Language Models." arXiv preprint arXiv:2512.02231 (2025).
+    Nguyen, Le Thien Phuc, et al. "See, Hear, and Understand: Benchmarking Audiovisual Human Speech Understanding in Multimodal Large Language Models." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), Findings, 2026.
 ---
 
 <!-- NOTE: Summary based on title only - verify and expand with actual abstract -->
