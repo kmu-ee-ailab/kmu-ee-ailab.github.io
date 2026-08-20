@@ -16,6 +16,14 @@ The retinal vasculature is a primary biomarker for vision-threatening and system
 - **Generative modeling for vessel data.** Using diffusion models to synthesize structurally realistic fundus images with paired vessel annotations, addressing data scarcity for rare conditions.
 - **Image enhancement for downstream vessel analysis.** Deep learning frameworks that improve fundus image quality — correcting illumination, blur, and artifacts — to make vessel analysis more reliable.
 
+## SERVAL: our retinal vessel assessment platform
+
+Much of this research has been consolidated into **SERVAL** (SEoul Retinal Vessel Assessment Library), a software platform that combines deep learning based vessel segmentation and artery/vein classification with interactive semi-automatic editing and graphical modeling for topological consistency. SERVAL is now available as a **web application** — no installation required:
+
+- **Web application:** [serval.clop.ai](https://serval.clop.ai/)
+- **Code:** [github.com/snubhretina/SERVAL](https://github.com/snubhretina/SERVAL)
+- **Paper:** [Scientific Reports, 2025](https://www.nature.com/articles/s41598-025-25421-6)
+
 ## Related publications
 
 - [Fine-Scale Vessel Extraction in Fundus Images by Registration with Fluorescein Angiography](/publications/2019-01-01-fine-scale-vessel-extraction-in-fundus-i/) — MICCAI, 2019

@@ -8,6 +8,7 @@ thumbnail: '/images/publications/2025-11-24-improving-retinal-vessel-assessment-
 htmlurl: 'https://www.nature.com/articles/s41598-025-25421-6'
 pdfurl: 'https://www.nature.com/articles/s41598-025-25421-6.pdf'
 codeurl: 'https://github.com/snubhretina/SERVAL'
+appurl: 'https://serval.clop.ai/'
 bibtex: |
     @article{Go_2025, title={Improving retinal vessel assessment precision by integrating deep learning with interactive editing and graphical modeling}, volume={15}, ISSN={2045-2322}, url={http://dx.doi.org/10.1038/s41598-025-25421-6}, DOI={10.1038/s41598-025-25421-6}, number={1}, journal={Scientific Reports}, publisher={Springer Science and Business Media LLC}, author={Go, Sojung and Chae, Jaemin and Kim, Uichan and Lim, Jongsoo and Kim, Jooyoung and Hogg, Stephen and Trucco, Emanuele and Park, Sang Jun and Lee, Soochahn}, year={2025}, month=nov }
 citation_mla: |
