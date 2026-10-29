@@ -14,7 +14,7 @@ Our research spans multimodal learning, medical image analysis, and generative m
   </div>
   <div class="research-card__text">
     <h2 class="research-card__title">Analysis of Multimodal LLMs</h2>
-    <p>Benchmarks and diagnostic tools for evaluating how multimodal large language models integrate audio, visual, and linguistic signals — including audiovisual speech understanding, active speaker detection, and contamination detection.</p>
+    <p>Benchmarks and diagnostic tools for evaluating how multimodal large language models integrate audio, visual, and linguistic signals — including audiovisual speech understanding, active speaker detection, multi-hop document reasoning, and contamination detection.</p>
   </div>
 </a>
 
@@ -64,7 +64,7 @@ Our research spans multimodal learning, medical image analysis, and generative m
   </div>
   <div class="research-card__text">
     <h2 class="research-card__title">Mass Detection from Mammography and Ultrasound</h2>
-    <p>Cascade and classification-based microcalcification detection in mammograms, and weakly/semi-supervised mass detection in breast ultrasound.</p>
+    <p>Cascade and classification-based microcalcification detection in mammograms, weakly/semi-supervised mass detection in breast ultrasound, and interpretable retrieval-augmented BI-RADS diagnosis.</p>
   </div>
 </a>
 
