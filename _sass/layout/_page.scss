@@ -5,14 +5,17 @@
 #main {
   @include container;
   @include clearfix;
+  width: 100%;
+  max-width: var(--global-container);
   margin-top: 2em;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+  padding-bottom: 3rem;
   animation: intro 0.3s both;
   animation-delay: 0.35s;
 
   @include breakpoint($x-large) {
-    max-width: $x-large;
+    max-width: var(--global-container);
   }
 }
 
@@ -33,8 +36,24 @@
 }
 
 .page__title {
+  position: relative;
   margin-top: 0;
-  line-height: 1;
+  margin-bottom: 1em;
+  padding-bottom: 0.6em;
+  line-height: 1.15;
+  font-size: $type-size-2;
+  letter-spacing: -0.02em;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 44px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--global-accent);
+  }
 
   & + .page__meta {
     margin-top: -0.5em;

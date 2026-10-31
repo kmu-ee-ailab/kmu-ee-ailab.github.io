@@ -1,6 +1,7 @@
 ---
 title: 'Selected as an NRF Basic Research Laboratory'
 date: 2026-06-30
+news_type: Funding
 permalink: /posts/2026/06/NRF_Basic_Research_Lab/
 tags:
   - announcements

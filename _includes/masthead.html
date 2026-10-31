@@ -1,13 +1,14 @@
 {% include base_path %}
 <div class="masthead">
   <div class="masthead__inner-wrap">
+    <a href="{{ base_path }}/" class="masthead__brand" aria-label="{{ site.title }} home">
+      <img src="{{ base_path }}/images/logo.png" alt="{{ site.title }}" class="masthead__logo" />
+      <span class="masthead__wordmark">Artificial Intelligence Lab<br>School of Electrical Engineering</span>
+    </a>
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><span class="navicon"></span></button>
+        <button aria-label="Menu"><span class="navicon"></span></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
-            <a href="{{ base_path }}/"><img src="{{ base_path }}/images/logo.png" alt="{{ site.title }}" style="max-height: 40px; vertical-align: middle; filter: invert(30%) sepia(26%) saturate(1915%) hue-rotate(185deg) brightness(97%) contrast(92%);" /></a>
-          </li>
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}

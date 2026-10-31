@@ -1,0 +1,85 @@
+# Content for the landing page (layout: home).
+# Edit the text here; the structure lives in _layouts/home.html and _includes/home/*.html.
+
+hero:
+  eyebrow: "Kookmin University · School of Electrical Engineering"
+  headline: "Grounded, interactive, data-efficient AI for the physical world"
+  # Photos: gallery items with `hero: true` (see _gallery/*.md). Each can set
+  # `hero_image`, `caption`, and `focus` (CSS object-position, e.g. "center 40%").
+  interval_ms: 6000
+  buttons:
+    - label: "Our research"
+      url: /research/
+      style: light
+    - label: "Recent publications"
+      url: /publications/
+      style: ghost
+
+# Up to three cards under the lead paragraph. `new: true` adds a NEW ribbon.
+announcements:
+  - tag: Funding
+    new: true
+    title: "NRF Basic Research Laboratory, 2026–2029"
+    text: "Next Generation Hyper-perceptive Hyper-adaptive Action Foundation Model Lab, funded by the National Research Foundation of Korea from July 2026."
+    url: /posts/2026/06/NRF_Basic_Research_Lab/
+    link_label: "Read the announcement"
+  - tag: Software
+    title: "SERVAL is now a web application"
+    text: "Our platform for retinal vessel analysis in fundus images runs in the browser. Upload an image and get vessel maps and measurements."
+    url: https://serval.clop.ai/
+    link_label: "Open SERVAL"
+  - tag: Join us
+    title: "Prospective graduate students"
+    text: "Interested in physical AI, computer vision, or medical image analysis? Contact Prof. Soochahn Lee with a short note on your background and interests."
+    url: mailto:sclee@kookmin.ac.kr
+    link_label: "sclee@kookmin.ac.kr"
+
+news:
+  count: 8
+
+research_intro: "Our methods center on correspondence across views and modalities, learning from human interaction, and training from scarce data. The topics below are where they are applied today."
+
+# Topics shown on the landing page; the full list is on /research/.
+research_topics:
+  - title: "Analysis of Multimodal LLMs"
+    url: /research/multimodal-llms/
+    image: /images/publications/2025-12-01-see-hear-and-understand-benchmarking-fig1.png
+    text: "Benchmarks and diagnostic tools for how multimodal LLMs integrate audio, visual, and linguistic signals: audiovisual speech understanding, active speaker detection, multi-hop document reasoning, and contamination detection."
+  - title: "Registration of Multimodal Retinal Images"
+    url: /research/retinal-registration/
+    image: /images/publications/2025-03-01-active-diffusion-matching-score-based-i-fig1.png
+    text: "Aligning fundus, fluorescein angiography, and ultra-widefield retinal images across large appearance and geometric gaps, using score-based diffusion, autoregressive transformation, and generative enhancement."
+  - title: "The FIREFLY Dataset"
+    url: /research/firefly-dataset/
+    image: /images/publications/FIREFLY_thumbnail.png
+    text: "A registered fundus–FA dataset with fine-scale vessel and artery/vein annotations, extended with diffusion-based synthetic counterparts (FIREFLY-Gen)."
+  - title: "Vessel Analysis of Retinal Images"
+    url: /research/retinal-vessel-analysis/
+    image: /images/publications/2025-11-24-improving-retinal-vessel-assessment-prec-fig1.png
+    text: "Topology-aware vessel segmentation and artery/vein classification, interactive and prompt-based refinement, fundus image enhancement, and generative modeling for vessel-annotated data."
+  - title: "Mass and Abnormality Detection from Chest X-ray"
+    url: /research/chest-xray-detection/
+    image: /images/publications/2023-01-01-abnormality-detection-in-chest-x-ray-via-fig4.png
+    text: "Generative-comparison anomaly detection and disentangled targeted generation for chest X-ray analysis under weak or no lesion-level supervision."
+  - title: "Mass Detection from Mammography and Ultrasound"
+    url: /research/breast-mass-detection/
+    image: /images/publications/2019-03-01-joint-weakly-and-semi-supervised-deep-le-fig1.png
+    text: "Cascade and classification-based microcalcification detection in mammograms, weakly/semi-supervised mass detection in breast ultrasound, and interpretable retrieval-augmented BI-RADS diagnosis."
+
+publications:
+  count: 5
+
+footer:
+  lab: "Artificial Intelligence Lab"
+  school: "School of Electrical Engineering, Kookmin University"
+  address: "77 Jeongneung-ro, Seongbuk-gu, Seoul 02707, Korea"
+  email: sclee@kookmin.ac.kr
+  links:
+    - title: "Kookmin University"
+      url: https://www.kookmin.ac.kr/
+    - title: "Google Scholar"
+      url: https://scholar.google.com/citations?user=zG_owA8AAAAJ
+    - title: "GitHub"
+      url: https://github.com/kmu-ee-ailab
+    - title: "SERVAL"
+      url: https://serval.clop.ai/

@@ -1,6 +1,8 @@
 ---
 title: '1 paper accepted to ICML 2026'
 date: 2026-05-12
+news_type: Publication
+thumbnail: /images/publications/2026-07-01-dochop-benchmarking-out-of-domain-multi-fig1.png
 permalink: /posts/2026/05/ICML_One_Paper/
 tags:
   - announcements

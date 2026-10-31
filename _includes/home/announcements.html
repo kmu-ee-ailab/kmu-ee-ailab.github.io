@@ -1,0 +1,15 @@
+{% assign cards = site.data.home.announcements %}
+{% if cards and cards.size > 0 %}
+<div class="cards3">
+  {% for a in cards limit: 3 %}
+    {% assign external = false %}
+    {% if a.url contains '://' or a.url contains 'mailto:' %}{% assign external = true %}{% endif %}
+    <a class="acard{% if a.new %} new{% endif %}" href="{% if external %}{{ a.url }}{% else %}{{ a.url | relative_url }}{% endif %}"{% if a.url contains '://' %} target="_blank" rel="noopener"{% endif %}>
+      {% if a.tag %}<div class="tag">{{ a.tag }}</div>{% endif %}
+      <h3>{{ a.title }}</h3>
+      {% if a.text %}<p>{{ a.text }}</p>{% endif %}
+      <span class="more">{{ a.link_label | default: 'Learn more' }} <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+    </a>
+  {% endfor %}
+</div>
+{% endif %}

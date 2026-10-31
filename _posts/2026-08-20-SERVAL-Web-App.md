@@ -1,6 +1,8 @@
 ---
 title: 'SERVAL launched as a web application'
 date: 2026-08-20
+news_type: Software
+thumbnail: /images/publications/2025-11-24-improving-retinal-vessel-assessment-prec-fig1.png
 permalink: /posts/2026/08/SERVAL-web-app/
 tags:
   - announcements

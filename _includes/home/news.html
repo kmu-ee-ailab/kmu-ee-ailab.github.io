@@ -1,0 +1,28 @@
+{% assign news_count = site.data.home.news.count | default: 8 %}
+<section class="home-section news" id="news">
+  <div class="home-wrap">
+    <div class="section-head">
+      <div><h2>Latest News</h2></div>
+      <div class="head-actions">
+        <button type="button" class="icon-btn" data-track="prev" aria-label="Scroll news left"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+        <button type="button" class="icon-btn" data-track="next" aria-label="Scroll news right"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+        <a class="pill-link" href="{{ '/news/' | relative_url }}">All news</a>
+      </div>
+    </div>
+    <div class="news-track" id="news-track">
+      {% for post in site.posts limit: news_count %}
+        {% assign ntype = post.news_type | default: 'News' %}
+        <a class="ncard" href="{{ post.url | relative_url }}">
+          <div class="cat">{{ ntype }}</div>
+          {% if post.thumbnail %}
+            <div class="thumb"><img src="{{ post.thumbnail | relative_url }}" alt="" loading="lazy"></div>
+          {% else %}
+            <div class="thumb solid"><div><i class="fa {% case ntype %}{% when 'Funding' %}fa-award{% when 'Software' %}fa-code{% when 'Publication' %}fa-file-alt{% when 'Service' %}fa-user-tie{% else %}fa-newspaper{% endcase %}" aria-hidden="true"></i><small>{{ ntype }}</small></div></div>
+          {% endif %}
+          <h3>{{ post.title }}</h3>
+          <time class="date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

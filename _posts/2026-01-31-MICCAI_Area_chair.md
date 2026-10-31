@@ -1,6 +1,7 @@
 ---
 title: "Soochahn Lee to serve as MICCAI 2026 Area Chair"
 date: 2026-01-31
+news_type: Service
 permalink: /news/2026/01/MICCAI_Area_chair/
 tags:
   - announcements

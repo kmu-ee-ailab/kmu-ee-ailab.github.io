@@ -174,18 +174,29 @@
 
 .greedy-nav {
   position: relative;
-  min-width: 250px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 0;
   background: transparent;
 
   a {
     display: block;
-    margin: 0 1rem;
-    padding: 0.5rem 0;
+    margin: 0 0.1rem;
+    padding: 0.55rem 0.85rem;
     color: var(--global-masthead-link-color);
+    font-weight: 500;
+    border-radius: 8px;
     text-decoration: none;
+
+    @media (max-width: 1100px) {
+      padding-left: 0.6rem;
+      padding-right: 0.6rem;
+    }
 
     &:hover {
       color: var(--global-masthead-link-color-hover);
+      background: var(--global-bg-soft);
     }
   }
 
@@ -193,6 +204,8 @@
     position: absolute;
     height: 2.5rem;
     right: 0;
+    top: 50%;
+    transform: translateY(-50%);
     padding: 0 0.5rem;
     border: 0;
     outline: none;
@@ -203,59 +216,80 @@
   }
 
   .visible-links {
-    display: table;
+    /* Shrink-wrapped so greedy-nav can compare its width with the nav's. */
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+  }
+
+  /* When items have overflowed into the dropdown, the hamburger is shown at
+     the right edge; keep the right-aligned list clear of it. */
+  @include breakpoint($small) {
+    button:not(.hidden) ~ .visible-links {
+      margin-right: 2.75rem;
+    }
+  }
+
+  .visible-links {
 
     li {
-      display: table-cell;
-      vertical-align: middle;
-
-      &:first-child {
-        font-weight: bold;
-        text-wrap: wrap;
-
-        a {
-          margin-left: 0;
-        }
-      }
-
-      &:last-child {
-        a {
-          margin-right: 0;
-        }
-      }
-    }
-
-    #theme-toggle {
-      a {
-        width: 25px;
-        display: flex;
-        justify-content: center;
-        cursor: pointer;
-      }
+      display: block;
     }
 
     a {
       position: relative;
 
+      /* Active/hover indicator: short amber bar under the label. */
       &:before {
         content: "";
         position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 4px;
-        background: var(--global-border-color);
-        width: 100%;
+        left: 0.85rem;
+        right: 0.85rem;
+        bottom: 4px;
+        height: 2px;
+        border-radius: 2px;
+        background: var(--global-accent);
         -webkit-transition: $global-transition;
         transition: $global-transition;
         -webkit-transform: scaleX(0);
             -ms-transform: scaleX(0);
-                transform: scaleX(0); /* hide*/
+                transform: scaleX(0);
       }
 
       &:hover:before {
         -webkit-transform: scaleX(1);
             -ms-transform: scaleX(1);
-                transform: scaleX(1); /* reveal*/
+                transform: scaleX(1);
+      }
+    }
+
+    .selected a:before {
+      -webkit-transform: scaleX(1);
+          -ms-transform: scaleX(1);
+              transform: scaleX(1);
+    }
+
+    #theme-toggle a {
+      width: 38px;
+      height: 38px;
+      margin-left: 0.5rem;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--global-line);
+      border-radius: 10px;
+      color: var(--global-muted);
+      cursor: pointer;
+
+      &:before {
+        display: none;
+      }
+
+      &:hover {
+        color: var(--global-brand);
+        border-color: var(--global-brand);
+        background: transparent;
       }
     }
   }
@@ -266,10 +300,10 @@
     right: 0;
     margin-top: 15px;
     padding: 5px;
-    border: 1px solid var(--global-border-color);
+    border: 1px solid var(--global-line);
     border-radius: $border-radius;
     background: var(--global-bg-color);
-    box-shadow: 0 0 10px rgba(#000, 0.25);
+    box-shadow: var(--global-shadow);
 
     a {
       margin: 0;
@@ -278,7 +312,7 @@
 
       &:hover {
         color: var(--global-masthead-link-color-hover);
-        background: var(--global-border-color);
+        background: var(--global-bg-soft);
       }
     }
 
@@ -290,7 +324,7 @@
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
-      border-color: var(--global-border-color) transparent;
+      border-color: var(--global-line) transparent;
       display: block;
       z-index: 0;
     }
@@ -310,7 +344,7 @@
 
     li {
       display: block;
-      border-bottom: 1px solid var(--global-border-color);
+      border-bottom: 1px solid var(--global-line);
 
       &:last-child {
         border-bottom: none;

@@ -1,6 +1,8 @@
 ---
 title: 'New paper published in npj Digital Medicine'
 date: 2026-10-29
+news_type: Publication
+thumbnail: /images/publications/2026-10-03-interpretable-multimodal-retrieval-augm-fig1.png
 permalink: /posts/2026/10/npj_Digital_Medicine_B-RAD/
 tags:
   - announcements

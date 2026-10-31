@@ -90,4 +90,16 @@
 })();
 </script>
 
+<script>
+(function () {
+  var masthead = document.querySelector('.masthead');
+  if (!masthead) return;
+  function onScroll() {
+    masthead.classList.toggle('scrolled', (window.scrollY || window.pageYOffset || 0) > 8);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+
 {% include analytics.html %}

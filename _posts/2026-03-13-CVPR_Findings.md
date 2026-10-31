@@ -1,6 +1,8 @@
 ---
 title: '1 paper accepted to CVPR Findings 2026'
 date: 2026-03-13
+news_type: Publication
+thumbnail: /images/publications/2025-12-01-see-hear-and-understand-benchmarking-fig1.png
 permalink: /posts/2026/03/CVPR_Findings/
 tags:
   - announcements

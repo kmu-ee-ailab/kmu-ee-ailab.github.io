@@ -4,40 +4,26 @@
 
 .page__footer {
   @include clearfix;
-  background-color: var(--global-footer-bg-color);
-  color: var(--global-text-color-light);
-
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
+  position: static;
+  float: none;
   width: 100%;
   clear: both;
-
-  /* sticky footer fix start */
-  position: absolute;
-  bottom: 0em;
-  height: auto;
-  /* sticky footer fix end */
-
-  margin-top: 3em;
+  margin-top: auto; /* body is a flex column; this pins the footer to the bottom */
+  background-color: var(--global-bg-color);
+  color: var(--global-muted);
+  border-top: 1px solid var(--global-line);
 
   -webkit-animation: intro 0.3s both;
           animation: intro 0.3s both;
   -webkit-animation-delay: 0.45s;
           animation-delay: 0.45s;
-  border-top: 1px solid var(--global-dark-border-color);
 
   footer {
     @include clearfix;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1em;
-    max-width: 100%;
-    padding: 0 1em 1em;
-
-    @include breakpoint($x-large) {
-      max-width: $x-large;
-    }
+    width: 100%;
+    max-width: var(--global-container);
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 1.75rem;
   }
 
   a {
@@ -45,7 +31,8 @@
     text-decoration: none;
 
     &:hover {
-      text-decoration: underline;
+      color: var(--global-link-color);
+      text-decoration: none;
     }
   }
 
@@ -53,13 +40,59 @@
   .fab,
   .far,
   .fal {
-    color: var(--global-text-color-light);
+    color: var(--global-muted);
   }
 }
 
+.site-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 0.8fr);
+  gap: 2rem;
+  align-items: start;
+  font-size: 0.875em;
+  line-height: 1.6;
+
+  @include breakpoint(max-width $medium) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  p { margin: 0 0 0.35rem; }
+
+  h4 {
+    margin: 0 0 0.6rem;
+    font-size: 0.75em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--global-text-color);
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li { margin: 0 0 0.35rem; }
+  }
+}
+
+.site-footer__logo {
+  display: block;
+  height: 44px;
+  width: auto;
+  margin-bottom: 0.85rem;
+  filter: var(--global-logo-filter-footer);
+}
+
 .page__footer-copyright {
-  font-family: $global-font-family;
+  margin-top: 1.75rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--global-line);
+  font-family: $monospace;
   font-size: $type-size-7;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .page__footer-follow {

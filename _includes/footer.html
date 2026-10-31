@@ -1,7 +1,26 @@
 {% include base_path %}
+{% assign f = site.data.home.footer %}
 
+<div class="site-footer">
+  <div class="site-footer__brand">
+    <img src="{{ base_path }}/images/logo.png" alt="{{ site.title }}" class="site-footer__logo" />
+    <p>{{ f.lab | default: site.title }}<br>{{ f.school }}</p>
+  </div>
+  <div class="site-footer__col">
+    <h4>Address</h4>
+    <p>{{ f.address }}</p>
+    {% if f.email %}<p><a href="mailto:{{ f.email }}">{{ f.email }}</a></p>{% endif %}
+  </div>
+  {% if f.links %}
+  <div class="site-footer__col">
+    <h4>Links</h4>
+    <ul>
+      {% for l in f.links %}<li><a href="{{ l.url }}"{% if l.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ l.title }}</a></li>{% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</div>
 
 <div class="page__footer-copyright">
-  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}, {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
-  Site last updated {{ "now" | date: '%Y-%m-%d' }}
+  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }} &middot; Built with <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> and <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a> &middot; Updated {{ "now" | date: '%Y-%m-%d' }}
 </div>

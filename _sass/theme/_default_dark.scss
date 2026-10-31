@@ -3,18 +3,18 @@
     ========================================================================== */
 
 /* Color codes used for the theme */
-$primary-color              : #0ea1c5;
-$gray                       : #7a8288;
+$primary-color              : #2d5c9c;
+$gray                       : #9aa7bb;
 $dark-gray                  : mix(#000, $gray, 40%);
 $darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : mix(#fff, $gray, 50%);
+$light-gray                 : #28334a;
 
-$background                 : #474747;
-$background-light           : mix(#fff, $background, 80%);
-$background-lighter         : mix(#fff, $background, 90%);
-$text                       : #ffffff;
-$link                       : #0ea1c5;
-$link-dark                  : mix(#000, $link, 25%);
+$background                 : #0f1520;
+$background-light           : #151d2b;
+$background-lighter         : #1e2d45;
+$text                       : #e9eef6;
+$link                       : #a3c2f1;
+$link-dark                  : mix(#fff, $link, 25%);
 $link-light                 : mix(#fff, $link, 25%);
 
 /* Color codes used for the site */
@@ -25,10 +25,10 @@ $success-color              : #62c462;
 $warning-color              : #f89406;
 
 /* Other basic settings for the template */
-$border-radius              : 4px;
+$border-radius              : 8px;
 $box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
 $global-transition          : all 0.2s ease-in-out;
-$masthead-height            : 70px;
+$masthead-height            : 76px;
 $navicon-width              : 28px;
 $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
@@ -38,19 +38,36 @@ $sidebar-screen-min-width   : 1024px;
 html[data-theme="dark"] {
     --global-base-color                 : #{$primary-color};
     --global-bg-color                   : #{$background};
-    --global-footer-bg-color            : #{$background};
+    --global-footer-bg-color            : #{$background-light};
     --global-border-color               : #{$light-gray};
-    --global-dark-border-color          : #{$background-light};
+    --global-dark-border-color          : #3a4860;
     --global-code-background-color      : #fafafa;
     --global-code-text-color            : #{$darker-gray};
-    --global-fig-caption-color          : #{$light-gray};
+    --global-fig-caption-color          : #{$gray};
     --global-link-color                 : #{$link};
     --global-link-color-hover           : #{$link-dark};
-    --global-link-color-visited         : #{$link-light};
+    --global-link-color-visited         : #{$link};
     --global-masthead-link-color        : #{$text};
-    --global-masthead-link-color-hover  : #{$primary-color};
+    --global-masthead-link-color-hover  : #{$link};
     --global-text-color                 : #{$text};
-    --global-text-color-light           : #f3f3f3;
+    --global-text-color-light           : #{$gray};
     --global-thead-color                : #{$background-lighter};
-}
 
+    /* Redesign tokens */
+    --global-bg-soft                    : #{$background-light};
+    --global-card-bg                    : #18212f;
+    --global-line                       : #{$light-gray};
+    --global-muted                      : #{$gray};
+    --global-brand                      : #{$link};
+    --global-brand-ink                  : #{$primary-color};
+    --global-brand-soft                 : #1e2d45;
+    --global-row-hover                  : #1a2435;
+    --global-accent                     : #f3b545;
+    --global-accent-soft                : #3a2e14;
+    --global-accent-ink                 : #f3cd7a;
+    --global-shadow                     : 0 18px 44px rgba(0, 0, 0, 0.45);
+    --global-shadow-sm                  : 0 2px 8px rgba(0, 0, 0, 0.3);
+    --global-logo-filter                : none;
+    --global-logo-filter-footer         : opacity(0.6);
+    color-scheme: dark;
+}

@@ -1,0 +1,23 @@
+<section class="home-section" id="research">
+  <div class="home-wrap">
+    <div class="section-head">
+      <div>
+        <h2>Research</h2>
+        {% if site.data.home.research_intro %}<p class="sub">{{ site.data.home.research_intro }}</p>{% endif %}
+      </div>
+      <a class="more" href="{{ '/research/' | relative_url }}">All topics <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+    <div class="rgrid">
+      {% for t in site.data.home.research_topics %}
+        <a class="rcard" href="{{ t.url | relative_url }}">
+          <div class="img"><img src="{{ t.image | relative_url }}" alt="" loading="lazy"></div>
+          <div class="body">
+            <h3>{{ t.title }}</h3>
+            <p>{{ t.text }}</p>
+            <span class="go">Overview and papers <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,6 +1,8 @@
 ---
 title: 'Code released for SERVAL (Scientific Reports 2025 paper)'
 date: 2026-05-12
+news_type: Software
+thumbnail: /images/publications/2025-11-24-improving-retinal-vessel-assessment-prec-fig1.png
 permalink: /posts/2026/05/SciRep-2025-SERVAL-code/
 tags:
   - announcements

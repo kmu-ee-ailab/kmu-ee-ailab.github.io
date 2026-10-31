@@ -1,0 +1,48 @@
+{% assign pub_count = site.data.home.publications.count | default: 5 %}
+{% assign pubs = site.publications | sort: 'date' | reverse %}
+<section class="home-section pubs" id="pubs">
+  <div class="home-wrap">
+    <div class="section-head">
+      <div>
+        <h2>Recent Publications</h2>
+        <p class="sub">Lab members in bold. The full list, with venue and year filters, is on the publications page.</p>
+      </div>
+      <a class="more" href="{{ '/publications/' | relative_url }}">All publications <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+    <div class="publist">
+      {% for p in pubs limit: pub_count %}
+        {% assign venue = p.venue | default: '' %}
+        {% assign parts = venue | split: '(' %}
+        {% if parts.size > 1 %}
+          {% assign rest = parts.last | split: ')' %}
+          {% assign short = rest[0] %}
+          {% if rest.size > 1 %}
+            {% assign tail = rest[1] | remove_first: ',' | strip %}
+            {% if tail != '' %}{% assign short = short | append: ' ' | append: tail %}{% endif %}
+          {% endif %}
+        {% else %}
+          {% assign short = venue %}
+        {% endif %}
+        {% assign kind = 'journal' %}
+        {% if venue contains 'Conference' or venue contains 'Symposium' or venue contains 'Workshop' or venue contains 'Proceedings' %}{% assign kind = 'conf' %}{% endif %}
+        {% if venue contains 'arXiv' or venue contains 'preprint' %}{% assign kind = 'preprint' %}{% endif %}
+        <article class="pub">
+          <div class="year">{{ p.date | date: "%Y" }}</div>
+          <div class="pub-body">
+            <h3><a href="{% if p.titleurl %}{{ p.titleurl }}{% else %}{{ p.url | relative_url }}{% endif %}">{{ p.title }}</a></h3>
+            {% if p.excerpt %}<p class="authors">{{ p.excerpt | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>{% endif %}
+            <div class="venue"><span class="chip {{ kind }}" title="{{ venue | escape }}">{{ short }} {{ p.date | date: "%Y" }}</span></div>
+          </div>
+          <div class="links">
+            {% if p.pdfurl %}<a href="{{ p.pdfurl }}" title="PDF" aria-label="PDF"><i class="fa fa-file-pdf" aria-hidden="true"></i></a>{% endif %}
+            {% if p.htmlurl %}<a href="{{ p.htmlurl }}" title="Publisher page" aria-label="Publisher page"><i class="fa fa-globe" aria-hidden="true"></i></a>{% endif %}
+            {% if p.codeurl %}<a href="{{ p.codeurl }}" title="Code" aria-label="Code"><i class="fab fa-github" aria-hidden="true"></i></a>{% endif %}
+            {% if p.appurl %}<a href="{{ p.appurl }}" title="Web app" aria-label="Web app"><i class="fa fa-desktop" aria-hidden="true"></i></a>{% endif %}
+            {% if p.dataseturl %}<a href="{{ p.dataseturl }}" title="Dataset" aria-label="Dataset"><i class="fa fa-database" aria-hidden="true"></i></a>{% endif %}
+            <a href="{{ p.url | relative_url }}" title="Details and citation" aria-label="Details and citation"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

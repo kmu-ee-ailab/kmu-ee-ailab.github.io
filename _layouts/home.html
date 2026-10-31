@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<div class="home">
+  {% include home/hero.html %}
+
+  <section class="home-section home-intro">
+    <div class="home-wrap">
+      <div class="home-lead">{{ content }}</div>
+      {% include home/announcements.html %}
+    </div>
+  </section>
+
+  {% include home/news.html %}
+  {% include home/research.html %}
+  {% include home/publications.html %}
+</div>
+
+<script src="{{ base_path }}/assets/js/home.js" defer></script>

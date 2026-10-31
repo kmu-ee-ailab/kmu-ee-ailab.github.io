@@ -17,10 +17,10 @@ $success-color              : #62c462;
 $warning-color              : #f89406;
 
 /* Other basic settings for the template */
-$border-radius              : 6px;     // Slightly more modern uniform border-radius
+$border-radius              : 8px;
 $box-shadow                 : 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); // Sleek modern shadow
 $global-transition          : all 0.3s cubic-bezier(0.4, 0, 0.2, 1); // Butter smooth transitions
-$masthead-height            : 70px;
+$masthead-height            : 76px;
 $navicon-width              : 28px;
 $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
@@ -30,7 +30,7 @@ $sidebar-screen-min-width   : 1024px;
 :root {
     --global-base-color                 : #{$primary-color};
     --global-bg-color                   : #fff;
-    --global-footer-bg-color            : #f2f3f3;
+    --global-footer-bg-color            : #f3f5f9;
     --global-border-color               : #{$lighter-gray};
     --global-dark-border-color          : #bdc1c4;
     --global-code-background-color      : #fafafa;
@@ -44,5 +44,23 @@ $sidebar-screen-min-width   : 1024px;
     --global-text-color                 : #2D3748; // Sleek modern font body color
     --global-text-color-light           : #{$gray};
     --global-thead-color                : #{$lighter-gray};
+
+    /* Redesign tokens (landing page, masthead, footer). Dark values in _default_dark.scss. */
+    --global-container                  : 1200px;
+    --global-bg-soft                    : #f3f5f9;
+    --global-card-bg                    : #ffffff;
+    --global-line                       : #e1e6ee;
+    --global-muted                      : #5e6b7e;
+    --global-brand                      : #{$primary-color};
+    --global-brand-ink                  : #{$primary-color};
+    --global-brand-soft                 : #e7eef9;
+    --global-row-hover                  : #f4f7fb;
+    --global-accent                     : #f0a51c;
+    --global-accent-soft                : #fdf0d5;
+    --global-accent-ink                 : #7a4f05;
+    --global-shadow                     : 0 18px 44px rgba(23, 54, 95, 0.12);
+    --global-shadow-sm                  : 0 2px 8px rgba(23, 54, 95, 0.06);
+    --global-logo-filter                : invert(30%) sepia(26%) saturate(1915%) hue-rotate(185deg) brightness(97%) contrast(92%);
+    --global-logo-filter-footer         : invert(55%);
 }
 

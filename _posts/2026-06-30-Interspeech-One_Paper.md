@@ -1,6 +1,8 @@
 ---
 title: '1 paper accepted to Interspeech 2026'
 date: 2026-06-30
+news_type: Publication
+thumbnail: /images/publications/2025-01-01-unitalk-towards-universal-active-speake-fig1.png
 permalink: /posts/2026/06/Interspeech_One_Paper/
 tags:
   - announcements

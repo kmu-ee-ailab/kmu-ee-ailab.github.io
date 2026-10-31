@@ -1,6 +1,8 @@
 ---
 title: 'Code released for MICCAI 2025 paper'
 date: 2026-04-24
+news_type: Software
+thumbnail: /images/publications/2025-09-01-multimodal-prompt-sequence-learning-for-fig1.png
 permalink: /posts/2026/04/MICCAI-2025-multimodal-prompt-seq-code/
 tags:
   - announcements
